@@ -72,7 +72,20 @@ to maybe-plant  ;; person procedure
   ]
 end
 ```
+## Керування моделлю (інтерфейс)
+- **initial-population** — початкова кількість людей
+- **birth-rate** — базова ймовірність народження
+- **planting-rate** — базова ймовірність висадки дерев
+- **power-plants** — кількість електростанцій
+- **polluting-rate** — річний викид станції
+- **power-plant-radius** — радіус “впливу станції” для бонусів
+- **plant-birth-bonus** — додаткова ймовірність народження біля станції
+- **planting-near-plant-bonus** — додаткова ймовірність висадки біля станції
+- **low-health-threshold**, **seek-clean-radius**, **health-seek-prob** — параметри health-aware міграції
 
+**Монітори:** `count people`, `count trees`, `sum [pollution] of patches`.  
+
+---
 > **Інтерфейсні елементи:** слайдери `power-plant-radius`, `plant-birth-bonus`, `planting-near-plant-bonus`.
 <img width="830" height="713" alt="image" src="https://github.com/user-attachments/assets/6d47c2df-e94f-4630-89d7-a182c28980d0" />
 ---
@@ -167,21 +180,6 @@ to go
   ...
 end
 ```
-
----
-
-## Керування моделлю (інтерфейс)
-- **initial-population** — початкова кількість людей
-- **birth-rate** — базова ймовірність народження
-- **planting-rate** — базова ймовірність висадки дерев
-- **power-plants** — кількість електростанцій
-- **polluting-rate** — річний викид станції
-- **power-plant-radius** — радіус “впливу станції” для бонусів
-- **plant-birth-bonus** — додаткова ймовірність народження біля станції
-- **planting-near-plant-bonus** — додаткова ймовірність висадки біля станції
-- **low-health-threshold**, **seek-clean-radius**, **health-seek-prob** — параметри health-aware міграції
-
-**Монітори:** `count people`, `count trees`, `sum [pollution] of patches`.  
 
 ---
 
